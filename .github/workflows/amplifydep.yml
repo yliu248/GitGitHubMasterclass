@@ -59,6 +59,7 @@ jobs:
       - name: install npm packages
         run: |
           echo "#install npm packages"
+          npm install --package-lock-only
           npm ci
           cd amplify/api && npm ci && cd -
       - name: backend deploy
